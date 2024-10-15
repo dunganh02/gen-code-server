@@ -1,0 +1,7 @@
+version: '3'
+services:
+  server:
+    image: ar.demo/backend
+    build: .
+    ports:
+      - "8088:8088"
