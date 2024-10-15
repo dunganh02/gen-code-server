@@ -4,8 +4,8 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
-const arContentRoutes = require('./src/routes/ar-content');
-const qrcodeRouter = require('./src/routes/qrcodeRouter');
+const arContentRoutes = require('./routes/ar-content');
+const qrcodeRouter = require('./routes/qrcodeRouter');
 
 const app = express();
 app.use(cors());
