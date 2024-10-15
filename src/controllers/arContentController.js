@@ -91,7 +91,9 @@ exports.saveContent = async (req, res) => {
     const result = await newContent.save();
 
     // Tạo mã QR cho URL của mô hình
-    const modelUrl = `${process.env.URL_CLIENT}${modelPath}`;
+    // const modelUrl = `${process.env.URL_CLIENT}${modelPath}`;
+    const modelUrl = `http://localhost:3000${modelPath}`;
+
     const qrCodeImageUrl = await QRCode.toDataURL(modelUrl);
 
     res.status(201).json({ message: 'AR content saved successfully', qrCodeImageUrl, result });
